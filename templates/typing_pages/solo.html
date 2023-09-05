@@ -2,98 +2,167 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Solo Practice - Speed Typing Game</title>
     <style>
-      /* Add the following CSS styles to style.css */
+        /* Add the following CSS styles to style.css */
+        .container {
+            margin-top: 500px;
+            width: 80vmin;
+            padding: 50px 30px;
+            background-color: #ffffff;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            top: 50%;
+            left: 50%;
+            border-radius: 10px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    margin: 0;
-    padding: 0;
-}
+        .stats {
+            text-align: right;
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
 
-header {
-    background-color: #007BFF;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-}
+        .stats span {
+            font-weight: 600;
+        }
 
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 40px;
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
+        #quote {
+            text-align: justify;
+            margin: 50px 0 30px 0;
+        }
 
-.difficulty-select, .time-duration {
-    text-align: center;
-    margin-bottom: 20px;
-}
+        textarea {
+            resize: none;
+            width: 100%;
+            border-radius: 5px;
+            padding: 10px 5px;
+            font-size: 16px;
+        }
 
-.difficulty-select label, .time-duration label {
-    margin-right: 10px;
-}
+        .btn {
+            float: right;
+            margin-top: 20px;
+            background-color: #3066f6;
+            color: #ffffff;
+            border: none;
+            padding: 10px 30px;
+            border-radius: 5px;
+            font-size: 18px;
+        }
 
-button {
-    display: block;
-    width: 200px;
-    margin: 0 auto;
-    padding: 15px;
-    background-color: #007BFF;
-    color: #fff;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    cursor: pointer;
-}
+        .result {
+            margin-top: 40px;
+            display: none;
+        }
 
-.typing-challenge, #input-field {
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: 18px;
-}
+        .result h3 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 22px;
+        }
 
-#textarea {
-    width: 100%;
-    padding: 10px;
-}
+        .wrapper {
+            display: flex;
+            justify-content: space-around;
+        }
 
-.result {
-    text-align: center;
-    margin-top: 20px;
-    font-weight: bold;
-}
+        .wrapper span {
+            font-weight: 600;
+        }
 
-.progress-container {
-    width: 100%;
-    height: 10px;
-    background-color: #f0f0f0;
-    border-radius: 5px;
-    margin-bottom: 15px;
-}
+        .success {
+            color: #44b267;
+        }
 
-.progress-bar {
-    height: 100%;
-    background-color: #007BFF;
-    border-radius: 5px;
-    width: 0%;
-}
+        .fail {
+            color: #e81c4e;
+        }
 
-.time-left {
-    text-align: center;
-    margin-bottom: 20px;
-    font-weight: bold;
-}
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
 
+        header {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .cont {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .difficulty-select,
+        .time-duration {
+            text-align: left;
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        .difficulty-select label,
+        .time-duration label {
+            margin-right: 10px;
+        }
+
+        button {
+            display: block;
+            width: 200px;
+            margin: 0 auto;
+            padding: 15px;
+            background-color: #007BFF;
+            color: #fff;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .typing-challenge,
+        #input-field {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+
+
+        .progress-container {
+            width: 100%;
+            height: 10px;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+
+        .progress-bar {
+            height: 100%;
+            background-color: #007BFF;
+            border-radius: 5px;
+            width: 0%;
+        }
+
+        .time-left {
+            text-align: center;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
     </style>
 </head>
+
 <body>
     <header>
         <h1>Speed Typing Game</h1>
@@ -136,4 +205,5 @@ button {
 
     <script src="{% static 'js/main.js' %}"></script>
 </body>
+
 </html>
